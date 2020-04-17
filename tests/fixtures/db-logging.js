@@ -27,7 +27,7 @@ const getSingleLogMessage = async (logLevel) =>
                   // console.log(`Unable to fetch log message. Error : ${error}`);
                   return;
                 }
-                console.log(`The log that has been writtn to DB is ${logMessage}`);
+                console.log(`The log that has been written to DB is ${logMessage}`);
                 return logMessage;
         });
 
@@ -49,7 +49,7 @@ const setupDatabase = async () =>
 
         db.collection(mongoLoggerCollection).deleteMany().then( (result) =>
             {
-                //console.log(`Succcess : deleted : ${result.deletedCount}` );
+                //console.log(`Success : deleted : ${result.deletedCount}` );
                 return ;
 
             }).catch( (error) =>
